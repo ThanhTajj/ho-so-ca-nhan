@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 50px;
+    margin: 50px;
+}
+
+form > div {
+    display: flex;
+    margin: 5px 10px;
+}
+
+.finput > input {
+    width: 100%;
+}
+
+form > div > input {
+    height: 25px;
+}
+
+form > div > p{
+    margin-right: 100px;
+    width: 0px;
+}
+
+#checkbox {
+    margin-right: 5px;
+}
+
+button {
+    background-color: rgb(33, 148, 255);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 10px;
+}
+
