@@ -32,7 +32,7 @@
 
     <body>
         <header>
-            <nav>
+            <nav class="navbar">
                 <a href="homePage.html">Trang chủ</a>
                 <a href="index.html">Giới thiệu bản thân</a>
             </nav>
@@ -47,19 +47,30 @@
                 <h2>Đăng ký học</h2>
                 <form>
                     <label for="email">Email</label>
-                    <input id="email" type="email" name="email" required />
+                    <input id="email" class="tags" type="email" name="email" required />
 
                     <label for="dob">Ngày sinh</label>
-                    <input id="dob" type="date" name="dob" />
+                    <input id="dob" class="tags" type="date" name="dob" />
 
-                    <button class="btn btn-primary" type="submit">Đăng ký học</button>
+                    <button class="btn" type="submit">Đăng ký học</button>
+                    <button class="btn danger" type="reset">Xóa</button>
                 </form>
             </section>
             <section>
                 <h2>Danh sách các buổi học</h2>
                 <table>
-                    <thead><tr><th>Buổi</th><th>Chủ đề</th></tr></thead>
-                    <tbody><tr><td>1</td><td>HTML</td></tr></tbody>
+                    <thead>
+                        <tr>
+                            <th>Buổi</th>
+                            <th>Chủ đề</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>HTML</td>
+                        </tr>
+                    </tbody>
                 </table>
             </section>
             <aside>
@@ -72,7 +83,9 @@
             </aside>
         </main>
         <footer id="footer" style="color:gray">
-            copyright © 2024 by Your Name. All rights reserved.
+            <div>
+                copyright © 2024 by Your Name. All rights reserved.
+            </div>
         </footer>
         <!-- Bootstrap JavaScript Bundle (includes Popper) -->
         <script

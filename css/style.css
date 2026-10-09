@@ -4,38 +4,57 @@ body { line-height: 1.5; -webkit-font-smoothing: antialiased; }
 img, picture, video { display: block; max-width: 100%; }
 input, button, textarea, select { font: inherit; }
 
+:root {
+    --color-primary: #0d6efd;
+    --color-bg: #ffffff;
+    --color-text: #1f2160;
+    --radius: 12px;
+    --space: 1rem;
+}
+
 body {
   font-family: "Be Vietnam Pro", system-ui, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  color: #1f2160;
-  background: linear-gradient(135deg, #ffffff 0%, #7d85ff 60%, #ff4c52 120%);
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
-h1 { font-size: 2.25rem; font-weight: 800; line-height: 1.2; text-align: center; }
-.muted { color: hsl(235 20% 45%); }
+h1 { line-height: 1.2; text-align: center; }
 
-h1:hover, h2:hover, a:hover {
+h1:hover, h2:hover {
     color:aqua;
 }
 
 h2 {
     width: fit-content;
     transition: transform 0.3s ease;
-    margin-left: 1.5rem;
 }
 
 h2:hover {
     transform: translateY(-5px) scale(1.05);
 }
 
-.btn-primary {
+.btn:hover {
+    background-color: #ffffff;
+    color: #0d6efd;
+}
+
+.btn {
+    background-color: var(--color-primary);
+    border-radius: var(--radius);
+    padding: calc(var(--space) / 2) var(--space);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn-primary:hover {
+.btn.danger {
+    --color-primary: #e31b23;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn.danger:hover {
     background-color: #ffffff;
-    color: #0d6efd;
+    color: #e31b23;
 }
 
 .img1 {
@@ -51,11 +70,70 @@ h2:hover {
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-20px); }
+  50%      { transform: translateY(-10px); }
 }
 h1 { animation: float 3s ease-in-out infinite; }
 
 @keyframes rotate {
   0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(45deg, #ffffff 0%, #7d85ff 60%, #ff4c52 120%);
+}
+
+.navbar > a {
+    color: #ffffff;
+}
+
+.navbar > a:hover {
+    color: aqua;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.infor {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .infor{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .infor{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #14153d;
+        --color-text: #eef0fb;
+    }
+}
+
+main {
+    margin-left: 1.5rem;
+}
+
+footer {
+    background: linear-gradient(45deg, #ffffff 0%, #7d85ff 60%, #ff4c52 120%);
+}
+
+footer > div {
+    margin-left: 1.5rem;
 }
