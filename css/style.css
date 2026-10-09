@@ -43,6 +43,7 @@ h2:hover {
 .btn {
     background-color: var(--color-primary);
     border-radius: var(--radius);
+    margin: 10px 10px 10px 0;
     padding: calc(var(--space) / 2) var(--space);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -89,6 +90,7 @@ h1 { animation: float 3s ease-in-out infinite; }
 
 .navbar > a {
     color: #ffffff;
+    text-decoration: none;
 }
 
 .navbar > a:hover {
