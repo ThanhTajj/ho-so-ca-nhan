@@ -7,57 +7,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Bootstrap CSS v5.3.8 -->
-        <link
+        <!-- <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
             crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="css/style.css" />
-        <style>
-            body {
-                height: 1500px;
-            }
-            header {
-                height: 5%;
-            }
-            main {
-                height: 85%;
-            }
-            footer {
-                height: 10%;
-            }
-        </style>
+        /> -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <!-- <link rel="stylesheet" href="css/style.css" /> -->
     </head>
 
-    <body>
-        <header>
-            <nav class="navbar">
-                <a href="index.html">Trang chủ</a>
-                <a href="profilePage.html">Giới thiệu bản thân</a>
+    <body class="h-[1500px] font-sans text-base leading-[1.6] antialiased bg-white text-[#1f2160] dark:bg-[#14153d] dark:text-[#eef0fb]">
+        <header class="h-[5%]">
+            <nav class="p-[0.5rem] flex items-center justify-center gap-4 bg-[linear-gradient(45deg,#ffffff_0%,#7d85ff_60%,#ff4c52_120%)]">
+                <a href="index.html" class="text-white no-underline hover:text-cyan-300">Trang chủ</a>
+                <a href="profilePage.html" class="text-white no-underline hover:text-cyan-300">Giới thiệu bản thân</a>
             </nav>
         </header>
-        <main>
-            <h1>Chào mừng đến với trang web của tôi!</h1>
+        <main class="h-[85%] ml-[1.5rem]">
+            <h1 class="w-b text-[2.5rem] hover:text-cyan-300 text-center leading-tight animate-[bounce_3s_infinite]">Chào mừng đến với trang web của tôi!</h1>
             <section>
-                <h2>Đây là trang chủ của tôi.</h2>
-                <img class="img1" src="img/uiacat.webp" alt="Ảnh 1" />
+                <h2 class="text-[2rem] hover:text-cyan-300 w-fit transition-transform duration-300 ease-in-out hover:-translate-y-[5px] hover:scales-105">Đây là trang chủ của tôi.</h2>
+                <img class="block max-w-[100%] mx-auto mb-[1rem] hover:animate-[spin_0.1s_linear_infinite]" src="img/uiacat.webp" alt="Ảnh 1" />
             </section>
             <section>
-                <h2>Đăng ký học</h2>
+                <h2 class="text-[2rem] hover:text-cyan-300 w-fit transition-transform duration-300 ease-in-out hover:-translate-y-[5px] hover:scales-105">Đăng ký học</h2>
                 <form>
                     <label for="email">Email</label>
-                    <input id="email" class="tags" type="email" name="email" required />
+                    <input id="email" class="rounded-xs border-2 flex flex-wrap gap-[0.5rem] bg-white text-black" type="email" name="email" required />
 
                     <label for="dob">Ngày sinh</label>
-                    <input id="dob" class="tags" type="date" name="dob" />
+                    <input id="dob" class="rounded-xs border-2 flex flex-wrap gap-[0.5rem] bg-white text-black" type="date" name="dob" />
 
-                    <button class="btn" type="submit">Đăng ký học</button>
-                    <button class="btn danger" type="reset">Xóa</button>
+                    <button class="bg-[#0d6efd] text-white hover:bg-[#c6c6c6] hover:text-[#0d6efd] rounded-xl my-[10px] mr-[10px] py-[8px] px-[15px] transition-colors duration-300 ease-in-out" type="submit">Đăng ký học</button>
+                    <button class="bg-[#e31b23] text-white hover:bg-[#c6c6c6] hover:text-[#e31b23] rounded-xl my-[10px] mr-[10px] py-[8px] px-[15px] transition-colors duration-300 ease-in-out" type="reset">Xóa</button>
                 </form>
             </section>
             <section>
-                <h2>Danh sách các buổi học</h2>
+                <h2 class="text-[2rem] hover:text-cyan-300 w-fit transition-transform duration-300 ease-in-out hover:-translate-y-[5px] hover:scales-105">Danh sách các buổi học</h2>
                 <table>
                     <thead>
                         <tr>
@@ -74,24 +61,24 @@
                 </table>
             </section>
             <aside>
-                <h2>Liên kết nhanh</h2>
-                <ul>
-                    <li><a href="profilePage.html">Giới thiệu bản thân</a></li>
-                    <li><a href="https://www.example.com" target="_blank">Trang web bên ngoài</a></li>
-                    <li><a href="#footer">Liên hệ</a></li>
+                <h2 class="text-[2rem] hover:text-cyan-300 w-fit transition-transform duration-300 ease-in-out hover:-translate-y-[5px] hover:scales-105">Liên kết nhanh</h2>
+                <ul class="list-disc p-6">
+                    <li><a href="profilePage.html" class="underline text-[#0d6efd]">Giới thiệu bản thân</a></li>
+                    <li><a href="https://www.example.com" target="_blank" class="underline text-[#0d6efd]">Trang web bên ngoài</a></li>
+                    <li><a href="#footer" class="underline text-[#0d6efd]">Liên hệ</a></li>
                 </ul>
             </aside>
         </main>
-        <footer id="footer" style="color:gray">
-            <div>
+        <footer id="footer" style="color:gray" class="h-[10%] bg-[linear-gradient(45deg,#ffffff_0%,#7d85ff_60%,#ff4c52_120%)]">
+            <div class="ml-[1.5rem]">
                 copyright © 2026 by .... All rights reserved.
             </div>
         </footer>
         <!-- Bootstrap JavaScript Bundle (includes Popper) -->
-        <script
+        <!-- <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
             crossorigin="anonymous"
-        ></script>
+        ></script> -->
     </body>
 </html>
