@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-700: #303392;
+  --color-star-500: #e31b23;
+  --font-sans: "Be Vietnam Pro", system-ui, sans-serif;
+}
+
+@layer components {
+  .btn {
+    @apply rounded-lg px-4 py-2 font-semibold transition-colors duration-300;
+  }
+}
